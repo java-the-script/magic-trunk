@@ -6,8 +6,9 @@ class OpenTrunk extends Component {
     return (
       <div>
         <h1>THIS IS THE OPEN TRUNK!</h1>
-        <Link to="openTrunk/house">House History</Link>
+        <Link to="openTrunk/books">Books</Link>
         <Link to="openTrunk/equipment">Equipment</Link>
+        <Link to="openTrunk/house">House History</Link>
       </div>
     )
   }

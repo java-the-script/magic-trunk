@@ -6,6 +6,7 @@ import {
   Link
 } from 'react-router-dom';
 import OpenTrunk from "./openTrunk";
+import Books from "./books";
 import Equipment from './equipment';
 import House from './house';
 
@@ -29,6 +30,7 @@ class App extends Component {
         <div className="main-container">
           <Route path="/" exact component={ClosedTrunk}></Route>
           <Route path="/openTrunk" exact component={OpenTrunk}></Route>
+          <Route path="/openTrunk/books" exact component={Books}></Route>
           <Route path="/openTrunk/equipment" exact component={Equipment}></Route>
           <Route path="/openTrunk/house" exact component={House}></Route>
         </div>
