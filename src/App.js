@@ -5,10 +5,11 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import OpenTrunk from "./openTrunk";
+import OpenTrunk from "./open-trunk";
 import Books from "./books";
 import Equipment from './equipment';
-import House from './house';
+import MagicalBeasts from './magical-beasts';
+import Potions from './potions';
 
 class ClosedTrunk extends Component {
   render() {
@@ -16,7 +17,7 @@ class ClosedTrunk extends Component {
       <div className="App">
         <header className="App-header">
           <h1>Magic Trunk</h1>
-          <Link to="/openTrunk">Open The Trunk</Link>
+          <Link to="/open-trunk">Open The Trunk</Link>
         </header>
       </div>
     )
@@ -29,10 +30,11 @@ class App extends Component {
       <Router>
         <div className="main-container">
           <Route path="/" exact component={ClosedTrunk}></Route>
-          <Route path="/openTrunk" exact component={OpenTrunk}></Route>
-          <Route path="/openTrunk/books" exact component={Books}></Route>
-          <Route path="/openTrunk/equipment" exact component={Equipment}></Route>
-          <Route path="/openTrunk/house" exact component={House}></Route>
+          <Route path="/open-trunk" exact component={OpenTrunk}></Route>
+          <Route path="/open-trunk/books" exact component={Books}></Route>
+          <Route path="/open-trunk/equipment" exact component={Equipment}></Route>
+          <Route path="/open-trunk/magical-beasts" exact component={MagicalBeasts}></Route>
+          <Route path="/open-trunk/potions" exact component={Potions}></Route>
         </div>
       </Router>
     );

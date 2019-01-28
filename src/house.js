@@ -6,7 +6,7 @@ class House extends Component {
     return (
       <div>
         <h1>House Portion</h1>
-        <Link to="/openTrunk">Back</Link>
+        <Link to="/open-trunk">Back</Link>
       </div>
     )
   }
