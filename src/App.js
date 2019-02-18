@@ -5,19 +5,19 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import OpenTrunk from "./open-trunk";
+import Trunk from "./trunk";
 import Books from "./books";
 import Equipment from './equipment';
 import MagicalBeasts from './magical-beasts';
 import Potions from './potions';
 
-class ClosedTrunk extends Component {
+class Home extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <h1>Magic Trunk</h1>
-          <Link to="/open-trunk">Open The Trunk</Link>
+          <Link to="/trunk">Open The Trunk</Link>
         </header>
       </div>
     )
@@ -29,12 +29,12 @@ class App extends Component {
     return (
       <Router>
         <div className="main-container">
-          <Route path="/" exact component={ClosedTrunk}></Route>
-          <Route path="/open-trunk" exact component={OpenTrunk}></Route>
-          <Route path="/open-trunk/books" exact component={Books}></Route>
-          <Route path="/open-trunk/equipment" exact component={Equipment}></Route>
-          <Route path="/open-trunk/magical-beasts" exact component={MagicalBeasts}></Route>
-          <Route path="/open-trunk/potions" exact component={Potions}></Route>
+          <Route path="/" exact component={Home}></Route>
+          <Route path="/trunk" exact component={Trunk}></Route>
+          <Route path="/trunk/books" exact component={Books}></Route>
+          <Route path="/trunk/equipment" exact component={Equipment}></Route>
+          <Route path="/trunk/magical-beasts" exact component={MagicalBeasts}></Route>
+          <Route path="/trunk/potions" exact component={Potions}></Route>
         </div>
       </Router>
     );

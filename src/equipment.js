@@ -6,7 +6,7 @@ class Equipment extends Component {
     return (
       <div>
         <h1>This is the Equipment Section!</h1>
-        <Link to="/open-trunk">Back</Link>
+        <Link to="/trunk">Back</Link>
       </div>
     )
   }

@@ -6,7 +6,7 @@ class Potions extends Component {
     return (
       <div>
         <h1>This is the Potions Section!</h1>
-        <Link to="/open-trunk">Back</Link>
+        <Link to="/trunk">Back</Link>
       </div>
     )
   }
