@@ -11,6 +11,29 @@ import Equipment from './equipment';
 import MagicalBeasts from './magical-beasts';
 import Potions from './potions';
 
+const routes = [
+  {
+    path: "/trunk",
+    component: Trunk,
+  },
+  {
+    path: "/trunk/books",
+    component: Books,
+  },
+  {
+    path: "/trunk/equipment",
+    component: Equipment,
+  },
+  {
+    path: "/trunk/magical-beasts",
+    component: MagicalBeasts,
+  },
+  {
+    path: "/trunk/potions",
+    component: Potions,
+  },
+];
+
 class Home extends Component {
   render() {
     return (
@@ -29,12 +52,11 @@ class App extends Component {
     return (
       <Router>
         <div className="main-container">
-          <Route path="/" exact component={Home}></Route>
-          <Route path="/trunk" exact component={Trunk}></Route>
-          <Route path="/trunk/books" exact component={Books}></Route>
-          <Route path="/trunk/equipment" exact component={Equipment}></Route>
-          <Route path="/trunk/magical-beasts" exact component={MagicalBeasts}></Route>
-          <Route path="/trunk/potions" exact component={Potions}></Route>
+          <Route path="/" exact component={Home} />
+          {routes.map((route) => {
+            console.log('LOGGING OUT ROUTE', route);
+            return <Route path={route.path} exact component={route.component} />
+          })}
         </div>
       </Router>
     );
